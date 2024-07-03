@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!-- saved from url=(0037)http://127.0.0.1:5500/calculator.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <style>
+                .mainDiv{
+                        
+                        background-color: rgb(14, 11, 11);
+                        border: 2px solid black;
+                        padding: 10px;
+                        margin: 10% 40% 5%;
+                        border-bottom: 4px solid black;
+                        border-radius: 10px;
+                }
+                .calcscreen{
+                        background-color: greenyellow;
+                        border: 1px solid black;
+                        padding: 5px;
+                        margin: 0px 0px 10px;
+                        border-bottom: 2px solid black;
+                        border-left: 2px solid black;
+                        border-right: 2px solid black;
+                        border-radius: 5px;
+                        border-bottom: 3px solid black;
+                        display: flex;
+                        flex-direction: row-reverse;
+                        
+                        
+                }
+                .calcbuts{
+                        display: grid;
+                        grid-template-columns: repeat(4,1fr);
+                        grid-row-gap: 5px;
+                        grid-column-gap: 2px;                     
+                }
+                .button{
+                        border: 1px solid black;
+                        border-radius: 4px;
+                        cursor: pointer;
+                }
+                
+        </style>
+</head>
+<body>
+        <div class="mainDiv">
+                <div class="calcscreen" style="font-size: 25px;">0               
+                </div>
+                <div class="calcbuts">
+                        <button class="button" type="button">7</button>
+                        <button class="button" type="button">8</button>
+                        <button class="button" type="button">9</button>
+                        <button class="button" type="button">/</button>
+                        <button class="button" type="button">4</button>
+                        <button class="button" type="button">5</button>
+                        <button class="button" type="button">6</button>
+                        <button class="button" type="button">x</button>
+                        <button class="button" type="button">1</button>
+                        <button class="button" type="button">2</button>
+                        <button class="button" type="button">3</button>
+                        <button class="button" type="button">-</button>
+                        <button class="button" type="button">0</button>
+                        <button class="button" type="button">.</button>
+                        <button class="button" type="button">+</button>
+                        <button class="button" type="button" style="background-color: chartreuse;">=</button>
+                        
+
+                </div>
+        </div>
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>
